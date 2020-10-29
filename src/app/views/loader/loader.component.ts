@@ -34,7 +34,7 @@ export class LoaderComponent implements OnInit {
 
   readingData(){
     setTimeout(() => {
-      const response = StorageService.getSessionStorageItem('agencias')
+      const response = StorageService.getLocalStorageItem('agencias')
       if(response.success && response.data != null){
         this._route.navigate(['/home'])
       }else {

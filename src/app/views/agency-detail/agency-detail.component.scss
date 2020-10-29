@@ -1,0 +1,35 @@
+.formField {
+	width: 100%;  
+}
+form {
+	min-width: 150px;
+	max-width: 500px;
+	width: 100%;
+}
+
+.formContainer{
+	display: flex;
+	align-items: center;
+	padding: 16px 8px;
+	flex-flow: column;
+}
+
+.backButton {
+	mat-icon {
+		color: orange;
+		border-radius: 50%;
+		background-color: whitesmoke;
+		margin: 0 10px;
+	}
+
+}
+.spacer {
+	flex: 1 1 auto;
+}
+
+.updateButton {
+	background-color: var(--primary);
+	margin: 8px;
+	color: white;
+	width: 130px;
+}

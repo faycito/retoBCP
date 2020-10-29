@@ -1,0 +1,13 @@
+.homeContent {
+	overflow: auto;
+	align-items: center;
+	max-height: calc(100vh - 58px);
+	display: grid;
+    justify-content: center;
+}
+.homeContainer {
+}
+
+bcp-agency-row {
+	cursor: pointer;
+}

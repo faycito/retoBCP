@@ -1,0 +1,17 @@
+<bcp-titlebar title="Favoritos"></bcp-titlebar>
+<div class="" bcpRow>
+	<button mat-icon-button class="backButton" (click)="onBack()">
+		<mat-icon>arrow_back</mat-icon> <label>Regresar</label>
+	</button>
+</div>
+<section class="homeContent">
+	<div class="homeContainer" bcpColumn>
+		<bcp-agency-row  
+			*ngFor="let agency of agencies;" 
+			[agency]="agency" 
+			(goToDetail)="goToDetail(agency)"
+			(onFavorite)="saveFavourite($event, agency)"
+		></bcp-agency-row>
+		<bcp-nodata *ngIf="agencies.length == 0"></bcp-nodata>
+	</div>
+</section>

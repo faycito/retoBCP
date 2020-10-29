@@ -1,0 +1,21 @@
+<mat-toolbar class="toolBar">
+	<div class=""  >
+		<span>Agencias</span>
+	</div>
+	<span class="spacer"></span>
+	<button mat-icon-button (click)="switchSearch()" *ngIf="!search; else searched">
+		<mat-icon>search</mat-icon>
+	</button>
+	<ng-template #searched>
+		<div class="searchBox" bcpRow>
+			<input  placeholder="Buscar" [(ngModel)]="searchInput"/>
+			<button mat-icon-button (click)="switchSearch()">
+				<mat-icon>clear</mat-icon>
+			</button>
+		</div>
+	</ng-template>
+	
+	<button mat-icon-button class="checkButton" (click)="onSearch()" >
+		<mat-icon>check</mat-icon>
+	</button>
+</mat-toolbar>

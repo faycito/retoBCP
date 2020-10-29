@@ -1,0 +1,16 @@
+<bcp-homebar (searching)="onSearch($event)" (clearSearch)="onSearch()"></bcp-homebar>
+<button mat-flat-button (click)="goToFavorite()">Ver Favoritos</button>
+<section class="homeContent">
+	<div class="homeContainer" bcpColumn>
+		<bcp-agency-row  
+			*ngFor="let agency of agencies;" 
+			[agency]="agency" 
+			(goToDetail)="goToDetail(agency)"
+			(onFavorite)="saveFavourite($event, agency)"
+			(showMapDetail)="showMap($event)"
+		></bcp-agency-row>
+	</div>
+	<div class="" *ngIf="agencies.length == 0">
+		<bcp-nodata></bcp-nodata>
+	</div>
+</section>

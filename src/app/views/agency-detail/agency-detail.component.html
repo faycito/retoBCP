@@ -1,0 +1,35 @@
+<bcp-titlebar title="Detalle de agencia"></bcp-titlebar>
+<div class="" bcpRow>
+	<button mat-icon-button class="backButton" (click)="onBack()">
+		<mat-icon>arrow_back</mat-icon> <label>Regresar</label>
+	</button>
+	<span class="spacer"></span>
+	<button class="updateButton" mat-flat-button [disabled]="enableButton" (click)="updateData()">Actualizar</button>
+</div>
+<section class="formContainer" *ngIf="agencyForm">
+	<form [formGroup]="agencyForm" (submit)="updateData()" bcpColumn>
+		<mat-form-field class="formField">
+			<mat-label>Nombre de Agencia</mat-label>
+			<input matInput formControlName="agency" placeholder="Mega Plaza" autocomplete="off">
+		</mat-form-field>
+		<mat-form-field class="example-full-width">
+			<mat-label>Dirección</mat-label>
+			<input matInput formControlName="address" placeholder="Av Juan de arona 366" autocomplete="off">
+		</mat-form-field>
+		<mat-form-field class="example-full-width">
+			<mat-label>Distrito</mat-label>
+			<input matInput formControlName="district" placeholder="San Isidro" autocomplete="off">
+		</mat-form-field>
+		<mat-form-field class="example-full-width">
+			<mat-label>latitud</mat-label>
+			<input matInput formControlName="lat" placeholder="-0.5513552" type="number" autocomplete="off">
+		</mat-form-field>
+		<mat-form-field class="example-full-width">
+			<mat-label>longitud</mat-label>
+			<input matInput formControlName="lon" placeholder="-12.555055" type="number" autocomplete="off">
+		</mat-form-field>
+	</form>
+	<div class="">
+		<bcp-google-maps [center]="gmOptions" (changeAgancyAddress)="changeAddress($event)"></bcp-google-maps>
+	</div>
+</section>

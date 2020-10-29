@@ -1,0 +1,28 @@
+<div class="agencyRow" bcpRow>
+	<div class="detailRow" bcpRow (click)="detailPressed()">
+		<img
+			[src]="agency.image"
+			loading="lazy"
+		/>
+		<div class="details">
+			<p class="name">{{agency.agencia}} - {{agency.distrito}}</p>
+			<p class="province">{{agency.provincia}}</p>
+			<p class="address">{{agency.direccion}}</p>
+		</div>
+	</div>
+	<div class="" bcpColumn>
+		<button mat-icon-button *ngIf="!agency.favorite; else favorite" (click)="toggleFavorite(true)">
+			<mat-icon>star_outline</mat-icon>
+		</button>
+		<ng-template #favorite>
+			<button mat-icon-button (click)="toggleFavorite(false)">
+				<mat-icon>star</mat-icon>
+			</button>
+		</ng-template>
+		
+		<button mat-icon-button id="map" (click)="showMap()" >
+			<mat-icon>place</mat-icon>
+		</button>
+
+	</div>
+</div>

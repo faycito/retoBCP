@@ -1,0 +1,31 @@
+.spacer {
+	flex: 1 1 auto;
+}
+
+.toolBar{
+	background-color: var(--primary);
+	color: white;
+
+	span {
+		margin-left: 20px;
+	}
+}
+
+.searchBox {
+	width: 25%;
+	min-width: 160px;
+	justify-content: flex-end;
+	input {
+		width: 100%;
+		min-width: 150px;
+	}
+}
+
+.checkButton {
+	background-color: white;
+	color: orange;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 5px;
+}

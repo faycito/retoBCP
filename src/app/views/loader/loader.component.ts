@@ -49,7 +49,7 @@ export class LoaderComponent implements OnInit {
           el.lat = aux;
           return el
         })
-        StorageService.setSessionStorageItem('agencias', data);
+        StorageService.setLocalStorageItem('agencias', data);
         this._route.navigate(['/home'])
       }
     }, 2500);

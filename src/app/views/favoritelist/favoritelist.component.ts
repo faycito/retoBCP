@@ -38,7 +38,7 @@ export class FavoritelistComponent implements OnInit {
   saveFavourite(value: boolean, agency: AgencyI) {
     const index: number = this.agencies.findIndex(agnt => agnt.id == agency.id);
     this.agencies[index].favorite = value;
-    StorageService.setSessionStorageItem('agencias', this.agencies)
+    StorageService.setLocalStorageItem('agencias', this.agencies)
     if(value) {
       this._snackBar.open('Se añadió a favoritos correctamente', 'Aceptar', {
         duration: 2500

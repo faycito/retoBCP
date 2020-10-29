@@ -92,7 +92,7 @@ export class AgencyDetailComponent implements OnInit, OnDestroy {
     this._snackBar.open('Datos actualizados correctamente', '',{
       duration: 2500
     })
-    StorageService.setSessionStorageItem('agencias', agencies);
+    StorageService.setLocalStorageItem('agencias', agencies);
     this.enableButton = true
   }
 

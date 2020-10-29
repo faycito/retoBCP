@@ -25,7 +25,7 @@ export class FavoritelistComponent implements OnInit {
   }
 
   getAgenciesData(){
-    const agencies = StorageService.getSessionStorageItem('agencias');
+    const agencies = StorageService.getLocalStorageItem('agencias');
     console.log("agencies: ", agencies)
     if(agencies.success &&  Array.isArray(agencies.data)){
       this.agencies = agencies.data.filter(agnt => agnt.favorite);

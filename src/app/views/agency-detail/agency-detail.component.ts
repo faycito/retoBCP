@@ -84,7 +84,7 @@ export class AgencyDetailComponent implements OnInit, OnDestroy {
     this.agency.lat = this.latitude;
     this.agency.lon = this.longitude;
 
-    const agencies: AgencyI[] = StorageService.getSessionStorageItem('agencias').data;
+    const agencies: AgencyI[] = StorageService.getLocalStorageItem('agencias').data;
     const index = agencies.findIndex(agent => agent.id == this.agency.id)
     agencies[index] = this.agency;
     console.log("agencies: ", agencies)
